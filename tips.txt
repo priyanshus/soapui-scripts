@@ -1,0 +1,35 @@
++++++++ Script-1 +++++++++++
+// To run a test step
+
+testRunner.runTestStepByName('StepName')
+
++++++++ Script-2 +++++++++++
+// Control Flow, jump to specific step
+
+testRunner.gotoStepByName('StepName')
+
+
++++++++ XQuery ++++++++++++++
+// XQuery should be used as replacement of Xpath where the assertion needs to be
+// done for a list of objects
+
+// XQuery to assert entire GameInfo Node where gameInfoId = 1
+
+declare namespace soap='http://www.w3.org/2003/05/soap-envelope';
+declare namespace m='http://footballpool.dataaccess.eu';
+
+for $gameInfo in //m:tGameInfo
+where $gameInfo/m:iId = 1
+return $gameInfo
+
+
+// XQuery to assert game Info where iId = 10
+declare namespace soap='http://www.w3.org/2003/05/soap-envelope';
+declare namespace m='http://footballpool.dataaccess.eu';
+
+//m:tGameInfo[m:iId =10]
+
+++++ Command Line Execution +++++
+// For windows use testrunner.bat -r <path-of-soapui-project.xml>
+// For mac or linux
+ ./testrunner.sh -r /Users/incognito/Downloads/webservice\ testing/calculator-data-driven-soapui-project.xml
