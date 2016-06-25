@@ -1,14 +1,3 @@
-+++++++ Script-1 +++++++++++
-// To run a test step
-
-testRunner.runTestStepByName('StepName')
-
-+++++++ Script-2 +++++++++++
-// Control Flow, jump to specific step
-
-testRunner.gotoStepByName('StepName')
-
-
 +++++++ XQuery ++++++++++++++
 // XQuery should be used as replacement of Xpath where the assertion needs to be
 // done for a list of objects
@@ -33,3 +22,8 @@ declare namespace m='http://footballpool.dataaccess.eu';
 // For windows use testrunner.bat -r <path-of-soapui-project.xml>
 // For mac or linux
  ./testrunner.sh -r /Users/incognito/Downloads/webservice\ testing/calculator-data-driven-soapui-project.xml
+
+
+ +++++ JDBC Connection String ++++
+ Driver : com.mysql.jdbc.driver
+ Connection String : jdbc:mysql://localhost:3306/?user=<username>&password=<password>

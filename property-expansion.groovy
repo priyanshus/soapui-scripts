@@ -32,3 +32,7 @@ testRunner.testStep.testCase.getPropertyValue('propertyName');
 // Similarly to read property from Test Suite level
 
 testRunner.testStep.testCase.testSuite.getPropertyValue('propertyName');
+
+// Set property
+
+testRunner.testStep.testCase.setPropertyValue('propertyName','value');
